@@ -211,6 +211,10 @@ function main(timestamp) {
     for(var i = 0; i < mrkve.length; i++) {
         mrkve[i].mrkev()
     }
+    if (zivoty <= 0) {
+        window.alert('GAME OVER - 4dice zhubnul')
+        window.location.replace(window.location.pathname + window.location.search + window.location.hash);
+    }
     player.pohyb()
     window.requestAnimationFrame(main)
 }
